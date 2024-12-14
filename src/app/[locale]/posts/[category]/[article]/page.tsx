@@ -4,10 +4,10 @@ import { renderBlock } from "@/utils/renderer";
 import { Title } from "@mantine/core";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     locale: string;
     article: string;
-  };
+  }>;
 }
 
 const Page = async ({ params }: PageProps) => {

@@ -1,6 +1,6 @@
 import { Card, Image, Text, Badge, Group, CardSection } from "@mantine/core";
-
-export function PostCard({ article }: any) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function PostCard({ article}: any) {
   const imgBaseUrl = "http://localhost:1337";
 
   return (
@@ -21,4 +21,4 @@ export function PostCard({ article }: any) {
       </Text>
     </Card>
   );
-}
+};

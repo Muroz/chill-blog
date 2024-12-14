@@ -1,7 +1,7 @@
 import { Media } from "@/components/Media";
 import { Quote } from "@/components/cms/Quote";
 import { RichText } from "@/components/cms/RichText";
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const renderBlock = (block: any, key: string | number) => {
   const { __component, ...props } = block;
   switch (__component) {

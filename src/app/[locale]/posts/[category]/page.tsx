@@ -4,10 +4,10 @@ import { Article, StrapiResponse } from "@/types/cms/strapi";
 import { Title } from "@mantine/core";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     locale: string;
     category: string;
-  };
+  }>;
 }
 
 const Page = async ({ params }: PageProps) => {

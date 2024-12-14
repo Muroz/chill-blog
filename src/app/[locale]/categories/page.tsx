@@ -1,15 +1,15 @@
 import { fetchCmsContent, getAuthHeaders } from "@/api";
-import { CardGrid } from "@/components/CardGrid";
+// import { CardGrid } from "@/components/CardGrid";
 import { Article, StrapiResponse } from "@/types/cms/strapi";
 
-interface PageProps {
-  params: {
-    locale: string;
-  };
-}
+// interface PageProps {
+//   params: {
+//     locale: string;
+//   };
+// }
 
-const Page = async ({ params }: PageProps) => {
-  const { locale } = await params;
+const Page = async () => {
+//   const { locale } = await params;
   const urlParamsObject = {
     sort: { createdAt: "desc" },
     populate: {
@@ -30,7 +30,7 @@ const Page = async ({ params }: PageProps) => {
   return (
     <div>
       {content?.data.map((category) => {
-        return <div>{category.name}</div>;
+        return <div key={category.id}>{category.title}</div>;
       })}
     </div>
   );

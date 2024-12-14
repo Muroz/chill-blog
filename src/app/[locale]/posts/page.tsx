@@ -3,9 +3,9 @@ import { CardGrid } from "@/components/CardGrid";
 import { Article, StrapiResponse } from "@/types/cms/strapi";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }
 
 const Page = async ({ params }: PageProps) => {
